@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Starwars RPG</title>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <div class="mainSectionTitle">Starwars RPG</div>
+    <div class="mainGameSection">
+        <!-- initial character selection -->
+        <div id="characterSection">
+            <div class="sectionTitle">Select Your Character</div>
+        </div>
+
+        <!-- Section for our selected character -->
+        <div id="selectedCharacterSection">
+            <div class="sectionTitle">Your Character</div>
+            <!-- where selected character will appear -->
+            <div id="selectedCharacter"></div>
+        </div>
+
+        <!-- Section for our available enemies -->
+        <div id="availableToAttack">
+            <div class="sectionTitle">Enemies Available to Attack</div>
+        </div>
+        
+        <div class="sectionTitle">Fight Section</div>
+        <div id="fight-section">
+            <button id="attackButton">Attack</button>
+        </div>
+
+        <div id="action">
+            <div class="characterSection">
+                <div class="sectionTitle">Defender</div>
+                <!-- where defender will appear -->
+                <div id="defender"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- in game messages area -->
+    <div id="gameMessages"></div>
+</body>
+</html>
