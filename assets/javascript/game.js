@@ -60,5 +60,15 @@ $(document).ready(function() {
         $(renderArea).append(charDiv);
     };
 
+    // load all character into the CHARACTER SECTION to be selected 
+    var initializeGame = function() {
+        for (var key in characters) {
+            renderCharacter(character[key], "#characters-section");
+        }
+    };
+
+    // run initializaGame function 
+    initializeGame();
+
     
 });
