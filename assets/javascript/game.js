@@ -52,6 +52,13 @@ $(document).ready(function() {
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // render character card to page where status is determined by passed args 
     var renderCharacter = function(character, renderArea) {
-        
-    }
+        var charDiv = $("<div class='character' data-name='" + character.name + "'>");
+        var charName = $("<div class= 'character-name'>").text(character.name);
+        var charImage = $("img alt= 'image' class='character-image'>").att("src", character.imageUrl);
+        var charHealth = $("<div class='character-health'>").text(character.health);
+        charDiv.append(charName).append(charImage).append(charHealth);
+        $(renderArea).append(charDiv);
+    };
+
+    
 });
