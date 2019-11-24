@@ -60,15 +60,53 @@ $(document).ready(function() {
         $(renderArea).append(charDiv);
     };
 
-    // load all character into the CHARACTER SECTION to be selected 
+    // load all character into the CHARACTER SECTION to be selected w/ this anonymous function
     var initializeGame = function() {
         for (var key in characters) {
             renderCharacter(character[key], "#characters-section");
         }
     };
 
-    // run initializaGame function 
+    // call initializeGame function 
     initializeGame();
 
-    
+    // function to handle updating the selected player or the current defender
+    var updateCharacter = function(charObj, areaRender) {
+        $(areaRender).empty();
+        renderCharacter(charObj, areaRender);
+    };
+
+    // function to render the available enemies to attack (runs after character has been selected)
+    var renderEnemies = function(enemyArr) {
+        for (let i = 0; < enemyArr.length; i++) {       
+            renderCharacter(enemyArr[i], "#available-to-attack-section");
+        }
+    };
+
+    // function to handle rendering game messages 
+    var renderMessage = function(message) {
+        var gameMessageSet = $("#game-message");
+        var newMessage = $("<div>").text(message);
+        gameMessageSet.append(newMessage);
+    };
+
+    // function that handles restaring the game after win/loss
+    var restartGame = function(resultMessage) {
+        var restart = $("<button>Restart</button>").click(function() {
+            location.reload();
+        });
+
+        // build div that will display the win/loss message
+        var gameState = $("<div").text(resultMessage);
+
+        // render the restart button and win/loss message to the page
+        $("body").append(gameState);
+        $("body").append(restart);
+    };
+
+    // function to cleawr the game message section 
+    var clearMessage = function() {
+        var gameMessage = $("game-message");
+        gameMessage.text("");
+    };
 });
