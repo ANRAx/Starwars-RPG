@@ -1,2 +1,3 @@
 # Starwars-RPG
 When the game starts, select your character by clicking on their picture. Conquer all of the remaining enemies for the duration of the game (they will be moved to a different area of the screen upon defeat). Choose your opponent by clicking on their picture and upon doing this the enemy will be moved to the ‘defender area’. This allows you to ‘attack’. Whenever you attack, the enemy will lose HP (shown at the bottom of the defender’s picture). The enemy will instantly counter your attacks so be careful not to lose your HP first! Whoever is the first to lose all HP is declared the loser. Good luck, and may the force be with you. 
+Built with jQuery, Javascript, HTML, and CSS.
