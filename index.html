@@ -1,50 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Starwars RPG</title>
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-</head>
-<body>
-    <div class="mainSectionTitle">Starwars RPG</div>
-    <div class="mainGameSection">
-        <!-- initial character selection -->
-        <div id="characterSection">
-            <div class="sectionTitle">Select Your Character</div>
-        </div>
+<html lang="en-us">
 
-        <!-- Section for our selected character -->
-        <div id="selectedCharacterSection">
-            <div class="sectionTitle">Your Character</div>
-            <!-- where selected character will appear -->
-            <div id="selectedCharacter"></div>
-        </div>
+	<head>
+        <meta charset="UTF-8">
+        <title>Star Wars with jQuery!</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Game Logic -->
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+    </head>
 
-        <!-- Section for our available enemies -->
-        <div id="availableToAttack">
-            <div class="sectionTitle">Enemies Available to Attack</div>
-        </div>
-        
-        <div class="sectionTitle">Fight Section</div>
-        <div id="fight-section">
-            <button id="attackButton">Attack</button>
-        </div>
+    <body>
 
-        <div id="action">
-            <div class="characterSection">
-                <div class="sectionTitle">Defender</div>
-                <!-- where defender will appear -->
-                <div id="defender"></div>
+        <div class="main-section-title">Star Wars RPG!</div>
+        <div id="main-game-section">
+            <!-- Where the characters are initially available to be selected. -->
+            <div id="characters-section">
+                <div class="section-title">Select Your Character</div>
             </div>
-        </div>
-    </div>
+            
+            <!-- Section for our selected character. -->
+            <div id="selected-character-section">
+                <div class="section-title">Your Character</div>
+                <!-- Where our selected character will appear. -->
+                <div id="selected-character"></div>
+            </div>
 
-    <!-- in game messages area -->
-    <div id="gameMessages"></div>
-</body>
+            <!-- Where our enemies available to attack will appear. -->
+            <div id="available-to-attack-section">
+                <div class="section-title">Enemies Available To Attack</div>
+            </div>
+
+            <div class="section-title">Fight Section</div>
+            <div id="fight-section">
+                <button id="attack-button">Attack</button>
+            </div>
+
+            <div id="action">
+                <div class="character-section">
+                    <div class="section-title">Defender</div>
+                    <!-- Where our defender will appear. -->
+                    <div id="defender"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Area for game messages. -->
+        <div id="game-message"></div>
+    </body>
+
 </html>
